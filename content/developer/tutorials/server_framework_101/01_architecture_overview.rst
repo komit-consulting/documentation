@@ -19,12 +19,12 @@ The presentation tier of Odoo is a combination of HTML5, JavaScript, and CSS. Th
 exclusively written in Python, while the data tier only supports PostgreSQL as an :abbr:`RDBMS
 (Relational Database Management System Software)`.
 
-Depending on the scope of your module, Odoo development can be done in any of these tiers.
-Therefore, before going any further, it may be a good idea to refresh your memory if you don't have
-an intermediate level in these topics. In order to go through this tutorial, you will need a very
-basic knowledge of HTML and an intermediate level of Python. There are plenty of tutorials freely
+Depending on the scope of your Odoo development, it can be done in any of these tiers. Therefore,
+before going any further, it may be a good idea to refresh your memory if you don't have an
+intermediate level in these topics. In order to go through this tutorial, you will need a very basic
+knowledge of HTML and an intermediate level of Python. There are plenty of tutorials freely
 accessible, so we cannot recommend one over another since it depends on your background. For
-reference this is the official `Python tutorial <https://docs.python.org/3/tutorial/>`_.
+reference, this is the official `Python tutorial <https://docs.python.org/3/tutorial/>`_.
 
 Odoo modules
 ============
@@ -47,6 +47,25 @@ Terminology:
   not Apps.
 - *Modules* may also be referred to as *addons*.
 
+In practice, modules are represented by directories. They are placed in a designated location called
+the **addons path**, which the server scans to discover available modules.
+
+In the :doc:`setup guide <../setup_guide>`, we cloned the `odoo/tutorials` repository and included
+it in the `addons-path` argument when starting the server. The directories present in the repository
+are all modules that can be installed on your Odoo server.
+
+.. exercise::
+   In your file explorer, navigate to the `odoo/tutorials` repository and inspect the available
+   modules. You should find the `real_estate` module that will serve as the foundation for building
+   our real estate application throughout this tutorial.
+
+   .. note::
+      You will notice that the module directories are not empty; they all contain at least two
+      essential files: :file:`__init__.py` and :file:`__manifest__.py`. These files are what
+      makes a simple directory an Odoo module. We'll get back to it in the next chapter.
+
 ----
+
+.. todo update incentive to match the title of the next page
 
 Ready to start? Let's now :doc:`start building our first Odoo app <02_newapp>`!
